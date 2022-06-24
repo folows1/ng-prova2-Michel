@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Categoria } from './categoria';
+import { CategoriasService } from './categorias.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prova2';
 }

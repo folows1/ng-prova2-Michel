@@ -1,0 +1,19 @@
+<p>categoria works!</p>
+
+<h2> Categoria: {{ categoria.name }}</h2>
+
+<div>
+    <ul>
+        <li *ngFor="let music of categoria.musics">
+            {{ music.filename }}
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h2>Nova Música</h2>
+    <form #myForm="ngForm" (submit)="adicionarMusica(myForm)">
+        <input type="text" name="filename" [(ngModel)]="novaMusica.filename" placeholder="Nome da categoria" required>
+        <button type="submit">Salvar</button>
+    </form>
+</div>

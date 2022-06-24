@@ -1,0 +1,17 @@
+<h2>Categorias:</h2>
+<div>
+    <div *ngFor="let categoria of categorias">
+        <a [routerLink]="['/categoria/', categoria.id]">
+            <h3>{{categoria.name}}</h3>
+        </a>
+        <h2> {{categoria.numberOfMusics}}</h2>
+    </div>
+</div>
+
+<div>
+    <h2>Nova Categoria</h2>
+    <form #myForm="ngForm" (submit)="adicionarCategoria(myForm)">
+        <input type="text" name="name" [(ngModel)]="novaCategoria.name" placeholder="Nome da categoria" required>
+        <button type="submit">Salvar</button>
+    </form>
+</div>
